@@ -27,4 +27,14 @@ export default {
     fill: none;
     stroke-width: 2.5px
   }
+
+  .links line {
+    stroke: #999;
+    stroke-opacity: 0.6;
+  }
+
+  .nodes circle {
+    stroke: #fff;
+    stroke-width: 1.5px;
+  }
 </style>

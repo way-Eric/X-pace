@@ -9,6 +9,9 @@ import '@/assets/css/style.less'
 Vue.config.productionTip = false
 Vue.use(iView)
 /* eslint-disable no-new */
+if (process.env.NODE_ENV === 'development') {
+  require('@/mock')
+}
 new Vue({
   el: '#app',
   router,

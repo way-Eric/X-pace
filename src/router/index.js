@@ -1,22 +1,28 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/view/index'
-import Home from '@/view/layout/home'
+import Center from '@/view/layout/home'
+import Base from '@/view/layout/newData'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'Index',
       component: Index,
-      redirect: '/home',
+      redirect: '/home/center',
       children: [
         {
-          path: '/home',
-          name: 'Home',
-          component: Home
+          path: 'center',
+          name: 'Center',
+          component: Center
+        },
+        {
+          path: 'base',
+          name: 'Base',
+          component: Base
         }
       ]
     }
